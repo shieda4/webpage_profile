@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>My first adventure</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+        font-family: "Lato", sans-serif
+    }
+
+    .mySlides {
+        display: none
+    }
+</style>
+
+<body style="background-color: black;">
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+        <!-- Automatic Slideshow Images -->
+        <div class="mySlides w3-display-container w3-center">
+            <img class="w3-round" alt="Hansel1" src="hansel1.jpg" style="width:50%">
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <h3>Eyes</h3>
+                <p><b>My eyes tell the truth</b></p>
+            </div>
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+            <img class="w3-round" alt="Hansel1" src="hansel2.jpg" style="width:50%">
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <h3>Smile</h3>
+                <p><b>This smile started it all.</b></p>
+            </div>
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+            <img class="w3-round" alt="Hansel1" src="hansel3.jpg" style="width:50%">
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <h3>Up</h3>
+                <p><b>Look up to the stars and dream.</b></p>
+            </div>
+        </div>
+
+        <!-- The Band Section -->
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px;" id="band">
+            <h2 class="w3-wide w3-text-white">Joseph Hansel Ong Daiz</h2>
+            <p class="w3-opacity w3-text-white"><i>I am bored</i></p>
+            <p class="w3-justify w3-text-white">
+                I have created this website because I am bored. I am not into web programming because it's mostly
+                designing and
+                I am not that good at designing. I prefer solving problems when coding. I am aware that this is an in
+                demend skill. I am here
+                becuase I'm still learning. Despite my disinterest in the field I am enjoying the . I might learn a few
+                frameworks and then head to the backend
+                where all the magic happens. More will come, probably.
+            </p>
+            <div class="w3-row w3-padding-32">
+                <div class="w3-third">
+                    <p class="w3-text-white">Just my brown eyes</p>
+                    <img src="hansel1.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+                </div>
+                <div class="w3-third">
+                    <p class="w3-text-white">A selfie of me</p>
+                    <img src="hansel2.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+                </div>
+                <div class="w3-third">
+                    <p class="w3-text-white">Top of the ladder view</p>
+                    <img src="hansel3.jpg" class="w3-round" alt="Random Name" style="width:60%">
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- End Page Content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <a href="https://facebook.com/josephhansel.daiz/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com/daizdaizda/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="https://twitter.com/DaizHansel"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+        <p class="w3-medium">Powered by HTML and CSS only. And some JavaScript
+        </p>
+    </footer>
+
+    <script>
+        // Automatic Slideshow - change image every 4 seconds
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 4000);
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
